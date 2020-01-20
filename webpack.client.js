@@ -9,7 +9,7 @@ const clientConfig = {
   entry: ['./src/client/index.js'],
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: 'index.[hash].bundle.js',
+    filename: '[name].[hash].bundle.js',
     // chunkFilename: "[name].[contenthash:8].chunck.js",
   },
   module: {
@@ -155,24 +155,24 @@ const clientConfig = {
   //   splitChunks: {
   //     chunks: 'async',
   //     minChunks: 2,
-  //     cacheGroups: {
-  //       commons: {
-  //         test: /[\\/]node_modules[\\/]/,
-  //         name: 'vendors',
-  //         chunks: 'all',
-  //         minChunks: 1,
-  //         priority: 2
-  //       },
-  //       styles: {
-  //         minSize: 30000,
-  //         name: 'styles',
-  //         test: /\/src\/components\/.*\.less|css$/,
-  //         chunks: 'async',
-  //         enforce: true,
-  //         priority: 5
-  //       }
-  //     }
+  // cacheGroups: {
+  //   commons: {
+  //     test: /[\\/]node_modules[\\/]/,
+  //     name: 'vendors',
+  //     chunks: 'all',
+  //     minChunks: 1,
+  //     priority: 2
+  //   },
+  //   styles: {
+  //     minSize: 30000,
+  //     name: 'styles',
+  //     test: /\/src\/components\/.*\.less|css$/,
+  //     chunks: 'async',
+  //     enforce: true,
+  //     priority: 5
   //   }
+  // }
+  // }
   // },
 };
 

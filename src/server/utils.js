@@ -42,12 +42,17 @@ function getCssFile() {
 		.reduce((a, b) => a + b, '\n')
 	return cssFile
 }
-function getJsFile() {
+function getJsFile(reqPath) {
 	const filePath = getBuildFile();
 	const keyOf = Object.keys(filePath)
 	//获取静态文件js
+	console.info(reqPath, 'reqPathreqPathreqPathreqPath')
 	const jsFile = keyOf.filter(key => {
-		return path.extname(filePath[key]) === '.js' && (filePath[key].indexOf('vendor') > 0 || filePath[key].indexOf('main') > 0)
+		if (reqPath === '/') {
+			return path.extname(filePath[key]) === '.js' && (key.indexOf('vendors') !== -1 || key.indexOf('home') !== -1)
+		} else {
+			return path.extname(filePath[key]) === '.js' && (key.indexOf('vendors') !== -1 || ('/' + key).indexOf(reqPath) !== -1)
+		}
 	}).map(item => `<script type="text/javascript" src='${filePath[item]}'></script>` + '\n')
 		.reduce((a, b) => a + b, '\n')
 	console.info(jsFile, 'Jsfilwejsfilwewe')
@@ -75,7 +80,7 @@ export const render = (store, routes, req, context) => {
 	html = html.replace(/<!-- inlinecss -->/g, `<style>${cssStr}</style>`)
 	html = html.replace(/<!-- window.store -->/g, `<script>window.store = ${JSON.stringify(store)}</script>`)
 	html = html.replace(/<!-- content -->/g, `${content}`)
-	console.info(html, 'htnlsdsfhlshfslhfl;sdsfdsfdsfdh;fhd')
+	html = html.replace(/<!-- js -->/g, `${getJsFile(req.path)}`)
 	return html;
 	// return `
 	// 		<html>

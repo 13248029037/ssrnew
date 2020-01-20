@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import Loadable from 'react-loadable';
-// import App from '../App';
+import App from '../App';
 // import Home from '../containers/Home';
 // import Translation from '../containers/Translation';
 // import NotFound from '../containers/NotFound';
@@ -10,7 +10,7 @@ import Loadable from 'react-loadable';
 // 然后再做服务器端渲染，把页面返回给用户
 
 function Loading() {
-  return <div>loading.....</div>;
+  return <div></div>;
 }
 const LoadableComponent = (loader) => Loadable({
   loader,
@@ -19,21 +19,21 @@ const LoadableComponent = (loader) => Loadable({
 console.info(LoadableComponent, 'LoadableComponentLoadableComponentLoadableComponentLoadableComponent')
 export default [{
   path: '/',
-  component: LoadableComponent(() => import(/* webpackChunkName: "APP" */'../App')),
+  component: App,
   routes: [
     {
       path: '/',
-      component: LoadableComponent(() => import(/* webpackChunkName: "Home" */'../containers/Home')),
+      component: LoadableComponent(() => import(/* webpackChunkName: "home" */'../containers/Home')),
       exact: true,
       key: 'home'
     }, {
       path: '/translation',
-      component: LoadableComponent(() => import(/* webpackChunkName: "Translation" */'../containers/Translation')),
+      component: LoadableComponent(() => import(/* webpackChunkName: "/translation" */'../containers/Translation')),
       exact: true,
       key: 'translation'
     },
     {
-      component: LoadableComponent(() => import(/* webpackChunkName: "NotFound" */'../containers/NotFound')),
+      component: LoadableComponent(() => import(/* webpackChunkName: "notfound" */'../containers/NotFound')),
     }
   ]
 }];

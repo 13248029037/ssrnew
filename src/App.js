@@ -21,7 +21,6 @@ import style from './lib/animate.css'
 // }
 class App extends React.Component {
   componentDidMount() {
-    alert(23232222233333333)
   }
   render() {
     const props = this.props

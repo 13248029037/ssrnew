@@ -40,8 +40,9 @@ app.get('*', function (req, res) {
     if (context.action === 'REPLACE') {
       res.redirect(301, context.url)
     } else if (context.NOT_FOUND) {
-      res.status(404);
-      res.send(html);
+      // res.status(404);
+      // res.send('未找到');
+      res.redirect('/translation')
     } else {
       res.send(html);
     }

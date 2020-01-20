@@ -11,7 +11,6 @@ class Translation extends Component {
     super(props)
   }
   componentDidMount() {
-    alert('not find33')
   }
   render() {
     console.info('xiaoxiaoixapdsfds')
@@ -21,6 +20,102 @@ class Translation extends Component {
         <meta name="description" content="这是DellLee的SSR翻译页面 - 丰富多彩的翻译内容" />
       </Helmet>
       <div className={styles.container}>
+        23424
+        </div>
+      <div className={styles.container}>
+        23424
+        </div>
+      <div className={styles.container}>
+        23424
+        </div>
+      <div className={styles.container}>
+        23424
+        </div>   <div className={styles.container}>
+        23424
+        </div>
+      <div className={styles.container}>
+        23424
+        </div>   <div className={styles.container}>
+        23424
+        </div>
+      <div className={styles.container}>
+        23424
+        </div>   <div className={styles.container}>
+        23424
+        </div>
+      <div className={styles.container}>
+        23424
+        </div>   <div className={styles.container}>
+        23424
+        </div>
+      <div className={styles.container}>
+        23424
+        </div>   <div className={styles.container}>
+        23424
+        </div>
+      <div className={styles.container}>
+        23424
+        </div>   <div className={styles.container}>
+        23424
+        </div>
+      <div className={styles.container}>
+        23424
+        </div>   <div className={styles.container}>
+        23424
+        </div>
+      <div className={styles.container}>
+        23424
+        </div>   <div className={styles.container}>
+        23424
+        </div>
+      <div className={styles.container}>
+        23424
+        </div>   <div className={styles.container}>
+        23424
+        </div>
+      <div className={styles.container}>
+        23424
+        </div>   <div className={styles.container}>
+        23424
+        </div>
+      <div className={styles.container}>
+        23424
+        </div>   <div className={styles.container}>
+        23424
+        </div>
+      <div className={styles.container}>
+        23424
+        </div>   <div className={styles.container}>
+        23424
+        </div>
+      <div className={styles.container}>
+        23424
+        </div>   <div className={styles.container}>
+        23424
+        </div>
+      <div className={styles.container}>
+        23424
+        </div>   <div className={styles.container}>
+        23424
+        </div>
+      <div className={styles.container}>
+        23424
+        </div>   <div className={styles.container}>
+        23424
+        </div>
+      <div className={styles.container}>
+        23424
+        </div>   <div className={styles.container}>
+        23424
+        </div>
+      <div className={styles.container}>
+        23424
+        </div>   <div className={styles.container}>
+        23424
+        </div>
+      <div className={styles.container}>
+        23424
+        </div>   <div className={styles.container}>
         23424
         </div>
       <div className={styles.container}>

@@ -17,7 +17,7 @@ export default [{
     {
       path: '/',
       component: Home,
-      // exact: true,
+      exact: true,
       loadData: Home.loadData,
       key: 'home'
     },
@@ -25,7 +25,7 @@ export default [{
       path: '/translation',
       component: Translation,
       loadData: Translation.loadData,
-      // exact: true,
+      exact: true,
       key: 'translation'
     },
     {

@@ -14,7 +14,6 @@ console.info(lessStyle, 'lessStylelessStylelessStyle')
 @observer
 class Home extends Component {
   componentDidMount() {
-    alert(1234)
   }
   constructor(props) {
     super(props)
